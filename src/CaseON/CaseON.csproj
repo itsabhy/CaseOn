@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <RootNamespace>CaseON</RootNamespace>
+    <AssemblyName>CaseON</AssemblyName>
+    <IsAotCompatible>true</IsAotCompatible>
+    <IsTrimmable>true</IsTrimmable>
+  </PropertyGroup>
+
+  <!-- NuGet package metadata -->
+  <PropertyGroup>
+    <PackageId>CaseON</PackageId>
+    <Title>CaseON — The all-in-one .NET string toolkit</Title>
+    <Authors>Abhishek Thakur</Authors>
+    <Company>Abhishek Thakur</Company>
+    <Description>A fast, dependency-free, AOT-friendly .NET string toolkit organized into simple modules: Text (casing, humanize, truncate), Validate (email/URL/IP/IBAN/ISBN/credit card and more), Country (calling codes, postal codes, ISO data), Similarity, Phonetic, Fuzzy, Extract, Normalize, Clean, Mask, Hash, Encode/Decode, Generate, Compare, Search, Tokenize, Slug, Inflect, Template, Metrics, Analyze, Password, RegexTools, Diff, Unicode, Transliterate, Language and Profanity. Just add the package and call Text.ToSnakeCase("x"), Validate.Email("x"), and more.</Description>
+    <Copyright>Copyright (c) Abhishek Thakur</Copyright>
+    <PackageProjectUrl>https://github.com/itsabhy/CaseOn</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/itsabhy/CaseOn</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>logo.jpg</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>string;text;casing;snake-case;kebab-case;pascal-case;camel-case;validation;email;url;iban;isbn;credit-card;levenshtein;jaro-winkler;fuzzy;soundex;metaphone;slug;inflector;pluralize;hash;base64;base58;mask;transliterate;profanity;utilities</PackageTags>
+    <PackageReleaseNotes>See CHANGELOG.md for release notes.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <!-- Versioning (SemVer) -->
+  <PropertyGroup>
+    <Version>2.0.0</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\logo.jpg" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

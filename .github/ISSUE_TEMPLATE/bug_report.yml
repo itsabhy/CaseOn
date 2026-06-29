@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a defect in CaseON
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug, including the actual vs. expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: A small code sample that reproduces the issue.
+      render: csharp
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: CaseON version
+      placeholder: "2.0.0"
+    validations:
+      required: true
+  - type: input
+    id: tfm
+    attributes:
+      label: Target framework
+      placeholder: "net8.0"
+    validations:
+      required: true

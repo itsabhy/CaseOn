@@ -1,0 +1,33 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+artifacts/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+
+# Test & coverage
+[Tt]est[Rr]esults/
+coverage/
+*.coverage
+*.trx
+*.opencover.xml
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI / agent tooling (never check in)
+.cursor/
+.claude/
+.aider*
+.codeium/
+*.local.md

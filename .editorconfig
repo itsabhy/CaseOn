@@ -1,0 +1,46 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{json,yml,yaml,csproj,props,targets}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.cs]
+# Namespaces & usings
+csharp_style_namespace_declarations = file_scoped:warning
+dotnet_sort_system_directives_first = true
+csharp_using_directive_placement = outside_namespace:warning
+
+# 'this.' preferences
+dotnet_style_qualification_for_field = false:warning
+dotnet_style_qualification_for_property = false:warning
+dotnet_style_qualification_for_method = false:warning
+
+# var preferences
+csharp_style_var_for_built_in_types = true:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+
+# Modern language features
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_prefer_braces = true:warning
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:warning
+
+# Analyzer tuning
+dotnet_diagnostic.CA1062.severity = none      # public methods already guard explicitly
+dotnet_diagnostic.CA1308.severity = none      # ToLowerInvariant is intentional for casing
+dotnet_diagnostic.CA1720.severity = none      # concise API names (Guid, etc.) are intentional
+dotnet_diagnostic.CA1716.severity = none      # concise names may match language keywords by design
+
+# Test projects: underscore-separated test names are the established convention
+[tests/**/*.cs]
+dotnet_diagnostic.CA1707.severity = none
+dotnet_diagnostic.CA1861.severity = none
